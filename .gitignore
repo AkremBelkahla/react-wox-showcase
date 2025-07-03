@@ -1,0 +1,96 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist
+dist-ssr
+build
+*.local
+.cache
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+
+# Testing
+/coverage
+__tests__/
+test/
+tests/
+*.test.js
+*.spec.js
+*.test.tsx
+*.spec.tsx
+
+# Misc
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug
+.eslintcache
+
+# Temporary files
+.tmp
+.temp
+
+# Public folder assets (remplacés par picsum)
+public/img/
+public/videos/
+public/assets/
+src/assets/
+
+# Documentation
+docs/
+*.md
+LICENSE
+CONTRIBUTING*
+CHANGELOG*
+
+# Configuration files
+.eslintrc*
+.prettierrc*
+.babelrc*
+.stylelintrc*
+.browserslistrc
+.postcssrc*
+.editorconfig
+
+# Deployment files
+windsurf_deployment.yaml
+
+# Git files
+.git/
+.github/
+.gitattributes
+.history/
+
+# Build intermediates
+.next/
+.nuxt/
+.out/
+.output/
+/public/videos/
