@@ -1,71 +1,71 @@
 # React Wox Showcase
 
-Une application web moderne et interactive construite avec React, TypeScript et TailwindCSS. Ce site vitrine professionnel offre une expérience utilisateur fluide avec défilement snap et des animations élégantes.
+A modern and interactive web application built with React, TypeScript, and TailwindCSS. This professional showcase website delivers a smooth user experience with snap scrolling and elegant animations.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- 📱 Design responsive et moderne
-- 🎯 Navigation fluide avec défilement snap
-- 🎨 Interface utilisateur élégante avec TailwindCSS
-- 🌍 Support multilingue avec sélection de drapeaux
-- 📧 Formulaire de contact intégré avec EmailJS
-- 🖼️ Slider de portfolio interactif
-- 📝 Formulaires d'inscription
-- 💼 Présentation des services et activités
-- 🔄 Processus de travail détaillé
+- 📱 Modern responsive design
+- 🎯 Smooth navigation with snap scrolling
+- 🎨 Elegant UI with TailwindCSS
+- 🌍 Multilingual support with flag selection
+- 📧 Integrated contact form with EmailJS
+- 🖼️ Interactive portfolio slider
+- 📝 Registration forms
+- 💼 Services and activities showcase
+- 🔄 Detailed work process flow
 
-## 🛠️ Technologies Utilisées
+## 🛠️ Technologies Used
 
-- **React 18** - Bibliothèque UI moderne et performante
-- **TypeScript** - Pour un code plus robuste et maintenable
-- **Vite** - Build tool ultra-rapide
-- **TailwindCSS** - Framework CSS utility-first
-- **Swiper** - Pour les sliders interactifs
-- **EmailJS** - Intégration d'emails sans backend
-- **FontAwesome** - Pour les icônes
-- **Lucide React** - Ensemble d'icônes modernes
+- **React 18** - Modern and performant UI library
+- **TypeScript** - For robust and maintainable code
+- **Vite** - Lightning fast build tool
+- **TailwindCSS** - Utility-first CSS framework
+- **Swiper** - For interactive sliders
+- **EmailJS** - Backend-less email integration
+- **FontAwesome** - For icons
+- **Lucide React** - Modern icon set
 
-## 🚀 Installation et Démarrage
+## 🚀 Installation and Setup
 
-1. Clonez le repository
+1. Clone the repository
 ```bash
 git clone https://github.com/AkremBelkahla/react-wox-showcase.git
 cd react-wox-showcase
 ```
 
-2. Installez les dépendances
+2. Install dependencies
 ```bash
 npm install
 ```
 
-3. Lancez le serveur de développement
+3. Start the development server
 ```bash
 npm run dev
 ```
 
-4. Ouvrez [http://localhost:5173](http://localhost:5173) dans votre navigateur
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
-## 📖 À Propos
+## 📖 About
 
-Ce projet est une vitrine web professionnelle conçue pour présenter des services, un portfolio et faciliter l'engagement client. Il met en avant une architecture moderne et des pratiques de développement robustes, utilisant les dernières technologies web pour offrir une expérience utilisateur optimale.
+This project is a professional web showcase designed to present services, portfolio, and facilitate client engagement. It features modern architecture and robust development practices, utilizing the latest web technologies to deliver an optimal user experience.
 
-L'application est structurée en composants réutilisables et maintient une séparation claire des responsabilités. Elle utilise TypeScript pour la sécurité du type et la maintenabilité du code, ainsi que TailwindCSS pour un styling flexible et cohérent.
+The application is structured with reusable components and maintains a clear separation of concerns. It uses TypeScript for type safety and code maintainability, along with TailwindCSS for flexible and consistent styling.
 
-## 🔧 Scripts Disponibles
+## 🔧 Available Scripts
 
-- `npm run dev` - Lance le serveur de développement
-- `npm run build` - Crée une version de production
-- `npm run preview` - Prévisualise la version de production
-- `npm run lint` - Vérifie le code avec ESLint
+- `npm run dev` - Starts the development server
+- `npm run build` - Creates a production build
+- `npm run preview` - Previews the production build
+- `npm run lint` - Checks code with ESLint
 
 ## 📱 Responsive Design
 
-L'application est entièrement responsive et optimisée pour tous les appareils, des mobiles aux grands écrans de bureau.
+The application is fully responsive and optimized for all devices, from mobile phones to large desktop screens.
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou soumettre une pull request.
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est sous licence MIT.
+This project is licensed under the MIT License.
