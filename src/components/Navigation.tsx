@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const menuItems = [
-  { label: 'HOME', href: '#home', image: 'https://picsum.photos/900/1600?random=60' },
-  { label: 'Presentation', href: '#presentation', image: 'https://picsum.photos/900/1600?random=61' },
-  { label: 'SERVICES', href: '#services', image: 'https://picsum.photos/900/1600?random=62' },
-  { label: 'PROCESS', href: '#process', image: 'https://picsum.photos/900/1600?random=63' },
-  { label: 'REGISTRATION 1', href: '#registration1', image: 'https://picsum.photos/900/1600?random=64' },
-  { label: 'REGISTRATION 2', href: '#registration2', image: 'https://picsum.photos/900/1600?random=65' },
-  { label: 'PORTFOLIO', href: '#portfolio', image: 'https://picsum.photos/900/1600?random=66' },
-  { label: 'ACTIVITIES', href: '#activities', image: 'https://picsum.photos/900/1600?random=67' },
-  { label: 'CONTACT', href: '#contact', image: 'https://picsum.photos/900/1600?random=68' },
+  { label: 'HOME', href: '#home', image: natureImage(900, 1600, 1) },
+  { label: 'Presentation', href: '#presentation', image: natureImage(900, 1600, 2) },
+  { label: 'SERVICES', href: '#services', image: natureImage(900, 1600, 3) },
+  { label: 'PROCESS', href: '#process', image: natureImage(900, 1600, 4) },
+  { label: 'REGISTRATION 1', href: '#registration1', image: natureImage(900, 1600, 5) },
+  { label: 'REGISTRATION 2', href: '#registration2', image: natureImage(900, 1600, 6) },
+  { label: 'PORTFOLIO', href: '#portfolio', image: natureImage(900, 1600, 7) },
+  { label: 'ACTIVITIES', href: '#activities', image: natureImage(900, 1600, 8) },
+  { label: 'CONTACT', href: '#contact', image: natureImage(900, 1600, 9) },
 ];
 
 export default function Navigation() {

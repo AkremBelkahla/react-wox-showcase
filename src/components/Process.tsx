@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const Process = () => {
   const [currentImageIndex1, setCurrentImageIndex1] = useState(0);
@@ -11,17 +12,17 @@ const Process = () => {
 
   const slides1 = [
     {
-      image: 'https://picsum.photos/900/1600',
+      image: natureImage(900, 1600, 27),
       title: 'Needs Analysis',
       description: 'We precisely identify your objectives and the needs of your target audience.'
     },
     {
-      image: 'https://picsum.photos/900/1600?random=1',
+      image: natureImage(900, 1600, 28),
       title: 'Strategic Design',
       description: 'Development of a customized strategy to maximize the impact of your project.'
     },
     {
-      image: 'https://picsum.photos/900/1600?random=2',
+      image: natureImage(900, 1600, 29),
       title: 'Detailed Planning',
       description: 'Meticulous organization of resources and establishment of a precise timeline.'
     }
@@ -29,17 +30,17 @@ const Process = () => {
 
   const slides2 = [
     {
-      image: 'https://picsum.photos/900/1600?random=3',
+      image: natureImage(900, 1600, 30),
       title: 'Creative Production',
       description: 'Creation of visual and textual content aligned with your brand identity.'
     },
     {
-      image: 'https://picsum.photos/900/1600?random=4',
+      image: natureImage(900, 1600, 31),
       title: 'Technical Development',
       description: 'Implementation of technical solutions adapted to your specific needs.'
     },
     {
-      image: 'https://picsum.photos/900/1600?random=5',
+      image: natureImage(900, 1600, 32),
       title: 'Launch and Monitoring',
       description: 'Deployment of your project and continuous performance analysis for optimization.'
     }

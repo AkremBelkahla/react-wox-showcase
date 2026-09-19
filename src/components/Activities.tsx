@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const generateActivities = () => {
   const activities = [];
@@ -8,8 +9,8 @@ const generateActivities = () => {
     activities.push({
       id: i,
       title: `Activity ${i}`,
-      image: `https://picsum.photos/900/1600?random=${i}`,
-      images: Array.from({ length: 9 }, (_, index) => `https://picsum.photos/900/1600?random=${i * 10 + index}`)
+      image: natureImage(900, 1600, i),
+      images: Array.from({ length: 9 }, (_, index) => natureImage(900, 1600, i * 10 + index))
     });
   }
   return activities;

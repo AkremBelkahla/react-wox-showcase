@@ -3,14 +3,15 @@ import emailjs from '@emailjs/browser';
 
 // Initialize EmailJS
 emailjs.init("mJZl4W2ab3S676QGN"); // À remplacer avec votre clé publique EmailJS
-import { Facebook, Instagram, Youtube, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Facebook, Instagram, Youtube, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const images = [
-  "https://picsum.photos/900/1600",
-  "https://picsum.photos/900/1600?random=50",
-  "https://picsum.photos/900/1600?random=51",
-  "https://picsum.photos/900/1600?random=52",
+  natureImage(900, 1600, 33),
+  natureImage(900, 1600, 34),
+  natureImage(900, 1600, 35),
+  natureImage(900, 1600, 36),
 ];
 
 const countries = [
@@ -394,8 +395,8 @@ ${formData.message}
         <div className="fixed inset-0 z-50 grid grid-cols-1 md:grid-cols-2">
           <div className="relative hidden md:block">
             <img 
-              src="https://www.11-76.com/themes/img/works/works-page-img-carousel-item-1.jpg" 
-              alt="Legal" 
+              src={natureImage(900, 1600, 37)}
+              alt="Legal"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30" />

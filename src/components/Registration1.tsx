@@ -6,12 +6,13 @@ emailjs.init("mJZl4W2ab3S676QGN");
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSlider } from '../hooks/useSlider';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const images = [
-  "https://picsum.photos/900/1600",
-  "https://picsum.photos/900/1600?random=30",
-  "https://picsum.photos/900/1600?random=31",
-  "https://picsum.photos/900/1600?random=32"
+  natureImage(900, 1600, 20),
+  natureImage(900, 1600, 21),
+  natureImage(900, 1600, 22),
+  natureImage(900, 1600, 23)
 ];
 
 const contentSlides = [
@@ -49,7 +50,7 @@ const languages = [
 const Registration1: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentContentIndex, setCurrentContentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [, setIsTransitioning] = useState(false);
   const isTabletPortrait = useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
 
   useEffect(() => {

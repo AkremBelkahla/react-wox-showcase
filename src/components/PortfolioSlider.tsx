@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSlider } from '../hooks/useSlider';
+import { natureImage } from '../utils/natureImage';
 
 const countryNames = {
   gb: "UK", us: "US", es: "ES", fr: "FR", ge: "DE",
@@ -50,14 +51,14 @@ const modalContent = {
 const items = names.map((person, index) => {
   const profileNumber = index + 1;
   return {
-    image: `https://picsum.photos/${480 + index % 20}/${680 + index % 30}`,
+    image: natureImage(480 + index % 20, 680 + index % 30, index),
     title: person.name,
     country: person.country,
     countryName: countryNames[person.country as keyof typeof countryNames],
     domain: person.domain,
     job: person.job,
     reference: person.reference,
-    images: Array.from({ length: 9 }, (_, i) => `https://picsum.photos/${480 + i}/${680 + (index + i) % 30}`),
+    images: Array.from({ length: 9 }, (_, i) => natureImage(480 + i, 680 + (index + i) % 30, index * 10 + i)),
     text: modalContent.text,
     id: profileNumber
   };
@@ -95,10 +96,12 @@ const PortfolioSlider = () => {
   };
 
   const nextModalImage = () => {
+    if (!selectedProject) return;
     setCurrentModalImage((prev) => (prev + 1) % selectedProject.images.length);
   };
 
   const prevModalImage = () => {
+    if (!selectedProject) return;
     setCurrentModalImage((prev) => (prev - 1 + selectedProject.images.length) % selectedProject.images.length);
   };
 

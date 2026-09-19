@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSlider } from '../hooks/useSlider';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const images = [
-  "https://picsum.photos/900/1600",
-  "https://picsum.photos/900/1600?random=10",
-  "https://picsum.photos/900/1600?random=11",
-  "https://picsum.photos/900/1600?random=12"
+  natureImage(900, 1600, 10),
+  natureImage(900, 1600, 11),
+  natureImage(900, 1600, 12),
+  natureImage(900, 1600, 13)
 ];
 
 const content = [

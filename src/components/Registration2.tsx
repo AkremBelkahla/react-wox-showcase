@@ -6,16 +6,17 @@ emailjs.init("mJZl4W2ab3S676QGN");
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useSlider } from '../hooks/useSlider';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { natureImage } from '../utils/natureImage';
 
 const slides = [
   {
-    image: "https://picsum.photos/900/1600",
+    image: natureImage(900, 1600, 24),
   },
   {
-    image: "https://picsum.photos/900/1600?random=40",
+    image: natureImage(900, 1600, 25),
   },
   {
-    image: "https://picsum.photos/900/1600?random=41",
+    image: natureImage(900, 1600, 26),
   }
 ];
 

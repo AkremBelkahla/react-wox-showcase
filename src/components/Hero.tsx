@@ -1,11 +1,11 @@
-import React from 'react';
 import { Facebook, Instagram } from 'lucide-react';
+import { natureImage } from '../utils/natureImage';
 
 const socialLinks = {
-  instagram: 'https://www.instagram.comagency',
-  facebook: 'https://www.facebook.comagency',
-  tiktok: 'https://www.tiktok.com/@woxagency',
-  youtube: 'https://www.youtube.com/@woxagency'
+  instagram: 'https://www.instagram.com',
+  facebook: 'https://www.facebook.com',
+  tiktok: 'https://www.tiktok.com/',
+  youtube: 'https://www.youtube.com/'
 };
 
 export default function Hero() {
@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <div className="relative h-screen w-full overflow-x-hidden">
       <img
-        src="https://picsum.photos/1920/1080"
+        src={natureImage(1920, 1080, 0)}
         alt="Hero background"
         className="absolute inset-0 w-full h-full object-cover"
       />
