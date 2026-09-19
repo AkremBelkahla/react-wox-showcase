@@ -397,6 +397,8 @@ ${formData.message}
             <img 
               src={natureImage(900, 1600, 37)}
               alt="Legal"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30" />

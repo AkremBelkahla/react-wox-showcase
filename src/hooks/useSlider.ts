@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 interface UseSliderProps {
   itemsLength: number;
@@ -7,40 +7,42 @@ interface UseSliderProps {
 }
 
 export function useSlider({ itemsLength, onNext, onPrev }: UseSliderProps) {
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [currentX, setCurrentX] = useState(0);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const currentX = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const handlersRef = useRef({ onNext, onPrev });
+  handlersRef.current = { onNext, onPrev };
 
   const handleDragStart = (clientX: number) => {
-    setIsDragging(true);
-    setStartX(clientX);
-    setCurrentX(clientX);
+    isDragging.current = true;
+    startX.current = clientX;
+    currentX.current = clientX;
   };
 
   const handleDragMove = (clientX: number) => {
-    if (!isDragging) return;
-    setCurrentX(clientX);
+    if (!isDragging.current) return;
+    currentX.current = clientX;
   };
 
   const handleDragEnd = () => {
-    if (!isDragging || !containerRef.current) return;
-    
-    const walk = currentX - startX;
+    if (!isDragging.current || !containerRef.current) return;
+
+    const walk = currentX.current - startX.current;
     const containerWidth = containerRef.current.offsetWidth;
     const threshold = containerWidth / 4; // 25% of container width
 
     if (Math.abs(walk) > threshold) {
       if (walk > 0) {
-        onPrev();
+        handlersRef.current.onPrev();
       } else {
-        onNext();
+        handlersRef.current.onNext();
       }
     }
-    
-    setIsDragging(false);
-    setStartX(0);
-    setCurrentX(0);
+
+    isDragging.current = false;
+    startX.current = 0;
+    currentX.current = 0;
   };
 
   useEffect(() => {
@@ -60,7 +62,8 @@ export function useSlider({ itemsLength, onNext, onPrev }: UseSliderProps) {
       document.removeEventListener('touchend', handleTouchEnd);
       document.removeEventListener('touchcancel', handleTouchCancel);
     };
-  }, [isDragging, startX, currentX]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const dragProps = {
     ref: containerRef,

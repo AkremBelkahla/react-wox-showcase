@@ -16,6 +16,8 @@ const generateActivities = () => {
   return activities;
 };
 
+const activities = generateActivities();
+
 const Activities = () => {
   const [selectedActivity, setSelectedActivity] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -23,7 +25,6 @@ const Activities = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const isTabletPortrait = useMediaQuery('(min-width: 769px) and (max-width: 1024px)');
 
-  const activities = generateActivities();
   const itemsPerPage = 9;
   const pagesCount = Math.ceil(activities.length / itemsPerPage);
 
@@ -103,6 +104,8 @@ const Activities = () => {
                         alt={activity.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         draggable="false"
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-black bg-opacity-60">
                         <div className="absolute bottom-4 md:bottom-8 inset-x-0 px-4 md:px-8 text-center transform transition-transform duration-300 group-hover:translate-y-[-1rem] md:group-hover:translate-y-[-2rem]">
@@ -133,6 +136,8 @@ const Activities = () => {
                 alt={`${selectedActivity.title} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
                 draggable="false"
+                loading="lazy"
+                decoding="async"
               />
               
               <div className="absolute inset-y-0 left-4 right-4 flex items-center justify-between">

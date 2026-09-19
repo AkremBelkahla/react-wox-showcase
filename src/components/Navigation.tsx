@@ -50,6 +50,8 @@ export default function Navigation() {
             <img 
               src={activeImage}
               alt="Menu background"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
             />
             <div className="absolute inset-0 bg-black/30" />

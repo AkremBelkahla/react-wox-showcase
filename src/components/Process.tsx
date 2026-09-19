@@ -100,6 +100,8 @@ const Process = () => {
                 alt={`Process ${index + 1}`}
                 className="w-full h-full object-cover"
                 draggable="false"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 text-center">
                 <h3 className="text-xl font-bold mb-2">{slide.title}</h3>
@@ -130,6 +132,8 @@ const Process = () => {
                 alt={`Process ${index + 1}`}
                 className="w-full h-full object-cover"
                 draggable="false"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 text-center">
                 <h3 className="text-xl font-bold mb-2">{slide.title}</h3>

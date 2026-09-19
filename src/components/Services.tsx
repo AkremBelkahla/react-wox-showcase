@@ -192,6 +192,10 @@ export default function Services() {
                     alt={`Service ${index + 1}`}
                     className="w-full h-full object-cover"
                     draggable="false"
+                  loading="lazy"
+                  decoding="async"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}
@@ -219,6 +223,10 @@ export default function Services() {
                     alt={`Service ${index + 1}`}
                     className="w-full h-full object-cover"
                     draggable="false"
+                  loading="lazy"
+                  decoding="async"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               ))}
@@ -280,6 +288,8 @@ export default function Services() {
                   alt={`Service ${index + 1}`}
                   className="w-full h-full object-cover"
                   draggable="false"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -345,6 +355,8 @@ export default function Services() {
                   alt={`Service ${index + 1}`}
                   className="w-full h-full object-cover"
                   draggable="false"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
