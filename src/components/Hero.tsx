@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="w-full px-4 md:px-8 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center text-white space-y-4 md:space-y-0 mb-[50px] md:mb-0">
           <div className="flex items-center space-x-4">
             {/* Bouton de son supprimé car nous utilisons maintenant une image */}
-            <p className="text-xs md:text-sm whitespace-nowrap">Wox  2025 All Rights Reserved.</p>
+            <p className="text-xs md:text-sm whitespace-nowrap">Developed by infinityweb.tn</p>
           </div>
           <div className="flex items-center space-x-6">
             <a href={socialLinks.instagram} className="text-white hover:text-black transition-colors">
